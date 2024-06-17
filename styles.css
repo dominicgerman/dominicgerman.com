@@ -1,0 +1,479 @@
+:root {
+  --dark: #333;
+  --light: #fff;
+
+  color-scheme: light dark;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.2rem;
+  line-height: 5.7rem;
+  letter-spacing: -0.32px;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.9rem;
+  letter-spacing: -0.32px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  letter-spacing: -0.32px;
+}
+p {
+  line-height: 1.5;
+}
+
+.layout {
+  max-width: 120rem;
+  padding: 4rem 8rem;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  align-items: baseline;
+  gap: 6rem;
+  margin-bottom: 12rem;
+  font-size: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.homeBtn {
+  box-sizing: border-box;
+  width: 5.6rem;
+  height: 5.6rem;
+  color: inherit;
+  background-color: inherit;
+  box-shadow: 0.6rem 0.6rem var(--dark);
+  border: 3px solid var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 2rem;
+}
+
+.homeBtn:hover,
+.backToHome a:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.backToHome {
+  margin: 3rem 0 3rem;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rem;
+}
+
+.welcome p {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  letter-spacing: -0.32px;
+}
+
+.welcome h2 {
+  align-self: normal;
+}
+
+.welcomeMsg {
+  margin-bottom: 30px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  gap: 2rem;
+  margin-bottom: 16rem;
+}
+
+.contentContainer {
+  max-width: 75rem;
+}
+
+.tools {
+  margin-bottom: 16rem;
+}
+
+.techStack {
+  margin-bottom: 12rem;
+}
+
+.techItems {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+}
+
+.techItems li {
+  display: inline-block;
+  font-size: 16px;
+  color: var(--light);
+  background: var(--dark);
+  border-radius: 10rem;
+  margin-top: 12px;
+  margin-right: 12px;
+  padding: 4px 12px;
+  text-align: center;
+}
+
+.projects {
+  margin-bottom: 16rem;
+}
+
+.projects h2 {
+  margin-bottom: 4rem;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.projectInfo span {
+  font-size: 1.6rem;
+}
+
+.projectInfo p > a {
+  text-decoration-thickness: 2px;
+}
+
+.projectLinks {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.small {
+  gap: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.small li {
+  font-size: 1.2rem;
+  /* padding: 1px 10px; */
+  line-height: 1.6rem;
+}
+
+.projectsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 7rem;
+  margin-bottom: 16rem;
+}
+
+.projectItem {
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+  align-items: center;
+}
+
+.contactMe {
+  margin-bottom: 26rem;
+  font-size: 2rem;
+}
+
+.contactMe h2 {
+  margin-bottom: 20px;
+}
+.contactMe p {
+  margin-bottom: 2.6rem;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 4rem 8rem;
+  margin: 0 auto;
+}
+
+.page {
+  display: flex;
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  font-weight: 400;
+}
+
+.heading {
+  margin-bottom: 4rem;
+}
+
+.btnSmall {
+  width: 192.49px;
+  height: 55px;
+}
+
+.btnSmall:hover,
+.link:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.buttonLarge {
+  width: 260px;
+  height: 55px;
+  background: var(--light);
+  border: 3px solid var(--dark);
+  box-shadow: 6px 6px var(--dark);
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: -0.32px;
+
+  color: var(--dark);
+
+  cursor: pointer;
+}
+
+.buttonLarge:hover {
+  background-color: var(--dark);
+  color: #fff;
+}
+
+.imageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#contact a {
+  margin-inline-end: 3rem;
+}
+
+.borderRadius {
+  border-radius: 9999px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.flexCenter {
+  align-self: center;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.4rem;
+  gap: 4.4rem;
+}
+
+.contactLinks {
+  display: flex;
+  font-size: 2.4rem;
+  gap: 4.4rem;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 50em) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 35em) {
+  h1 {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .welcome h2 {
+    font-size: 1.8rem;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 50em) {
+  .layout {
+    padding: 4rem 4rem;
+  }
+
+  .nav {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .nav {
+    gap: 3rem;
+  }
+
+  .homeBtn {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .contactLink {
+    display: none;
+  }
+}
+
+@media (max-width: 35em) {
+  .layout {
+    padding: 2rem 2rem;
+  }
+
+  .nav {
+    gap: 2rem;
+  }
+}
+@media (max-width: 50em) {
+  .projectItem {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .projectLinks {
+    flex-direction: column;
+  }
+  .page {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .page img {
+    width: 100%;
+    flex-basis: content;
+  }
+}
+
+@media (max-width: 35em) {
+  .welcome {
+    flex-direction: column-reverse;
+  }
+
+  .contentContainer {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 35em) {
+  .heading {
+    text-align: center;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .projects > h2 {
+    margin-bottom: 8rem;
+    text-align: center;
+  }
+
+  .projectsList {
+    gap: 12rem;
+  }
+
+  .img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .techItems {
+    text-align: center;
+  }
+
+  .welcomeMsg {
+    text-align: center;
+  }
+
+  .contactMe {
+    text-align: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+  .homeBtn {
+    box-shadow: 0.6rem 0.6rem var(--light);
+    border-color: var(--light);
+  }
+  .buttonLarge {
+    color: var(--light);
+    background: var(--dark);
+    border-color: var(--light);
+    box-shadow: 6px 6px var(--light);
+  }
+
+  .homeBtn:hover,
+  .backToHome a:hover,
+  .buttonLarge:hover,
+  .btnSmall:hover,
+  .link:hover,
+  .techItems li {
+    background-color: var(--light);
+    color: var(--dark);
+  }
+}
