@@ -25,16 +25,17 @@
         <div class="flex">
           <h1 class="welcomeMsg">My name is Dominic. This is my portfolio.</h1>
           <p class="welcomeMsg">
-            I made this portfolio site with plain old HTML and CSS. The visual
-            design is inspired by
+            Everything on this site is being served from a Caddy file server
+            running on a Raspberry Pi computer in my living room. It's just a
+            handful of static HTML and CSS files that I wrote years ago when I
+            was first learning how to program. The visual design is inspired by
             <a href="https://fullstackopen.com/en" target="_blank"
               >Full Stack Open</a
-            >. The site is being served by a containerized Node app running on a
-            Digital Ocean droplet running Ubuntu.
+            >.
           </p>
           <div class="projectLinks">
             <a
-              href="https://github.com/dominicgerman/bobloblawsblog"
+              href="https://github.com/dominicgerman/dominicgerman.com"
               target="_blank"
             >
               <button class="buttonLarge">View source</button>
@@ -51,15 +52,17 @@
       <section class="about">
         <h2>About me</h2>
         <p>
-          I am a web developer, digital content manager, and professional
-          singer. I'm one half of
+          I am a programmer analyst at a university in Chicago. I'm also one
+          half of
           <a
             href="https://mountprospectwebdesign.com"
             class="link"
             target="_blank"
             >Mount Prospect Web Design</a
           >, a small business that designs and builds web solutions for other
-          small businesses.
+          small businesses. When I'm not writing code, I sing professionally for
+          various symphony choruses and chamber choirs.
+
           <a href="./about" class="link"> Learn more about me</a>.
         </p>
       </section>
@@ -69,6 +72,69 @@
       <section class="projects" id="projects">
         <h2 class="heading">Projects</h2>
         <ul class="projectsList">
+          <li class="projectItem">
+            <img src="/rss-svgrepo-com.svg" width="212" height="211" class="" />
+            <div class="projectInfo contentContainer">
+              <h3>blog-aggregator</h3>
+              <p>
+                A blog aggregator microservice built with Go and PostgreSQL.
+                This application allows users to follow and unfollow RSS feeds
+                as well as fetch all of the latest posts from said RSS feeds. It
+                consists of a RESTful API and a long-running service worker that
+                reaches out over the internet to fetch data from remote
+                locations.
+              </p>
+              <ul class="techItems small">
+                <li>Go</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <div class="projectLinks">
+                <a
+                  href="https://github.com/dominicgerman/blog-aggregator"
+                  target="_blank"
+                >
+                  <button class="buttonLarge btnSmall">View source</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="projectItem">
+            <img
+              src="/markdown-fill-svgrepo-com.svg"
+              width="212"
+              height="211"
+              class=""
+            />
+            <div class="projectInfo contentContainer">
+              <h3>static site generator</h3>
+              <p>
+                A static site generator built with Python that parses a
+                directory of markdown files and converts them to a static
+                website. I primarily use this to generate an up-to-date HTML
+                version of a folder of Markdown files in my Obsidian vault that
+                contains my most frequently used recipes.
+              </p>
+              <ul class="techItems small">
+                <li>Python</li>
+                <li>Bash</li>
+                <li>HTML</li>
+              </ul>
+              <div class="projectLinks">
+                <a
+                  href="https://github.com/dominicgerman/static-site-generator/blob/main/README.md"
+                  target="_blank"
+                >
+                  <button class="buttonLarge btnSmall">More info</button>
+                </a>
+                <a
+                  href="https://github.com/dominicgerman/static-site-generator"
+                  target="_blank"
+                >
+                  <button class="buttonLarge btnSmall">View source</button>
+                </a>
+              </div>
+            </div>
+          </li>
           <li class="projectItem">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg"
@@ -86,6 +152,7 @@
                 Web API.
               </p>
               <ul class="techItems small">
+                <li>Javascript</li>
                 <li>Node.js</li>
                 <li>SQLite</li>
               </ul>
@@ -124,11 +191,11 @@
                 <li>Sveltkit</li>
                 <li>Markdown</li>
                 <li>Cloudflare</li>
-                <li>AWS</li>
+                <li>AWS Cloudfront</li>
               </ul>
               <div class="projectLinks">
                 <a href="https://mountprospectwebdesign.com" target="_blank">
-                  <button class="buttonLarge btnSmall">View project</button>
+                  <button class="buttonLarge btnSmall">View site</button>
                 </a>
                 <a
                   href="https://github.com/dominicgerman/koda-designs-v2"
@@ -162,7 +229,7 @@
               </ul>
               <div class="projectLinks">
                 <a href="https://daphnes.fly.dev/" target="_blank">
-                  <button class="buttonLarge btnSmall">View project</button>
+                  <button class="buttonLarge btnSmall">View site</button>
                 </a>
                 <a
                   href="https://github.com/dominicgerman/daphnes_fullstack"
@@ -175,7 +242,7 @@
           </li>
           <li class="projectItem">
             <img
-              src="https://npcovenant.cc/npcc-logo.svg?__frsh_c=348abcccdc648522f6a53d05a29cd90034ea6be5"
+              src="/npcc-logo.svg"
               width="212"
               height="211"
               class="borderRadius"
@@ -197,7 +264,7 @@
               </ul>
               <div class="projectLinks">
                 <a href="https://npcovenant.org" target="_blank">
-                  <button class="buttonLarge btnSmall">View project</button>
+                  <button class="buttonLarge btnSmall">View site</button>
                 </a>
               </div>
             </div>
@@ -226,14 +293,45 @@
                 <li>Vercel</li>
               </ul>
               <div class="projectLinks">
-                <a
-                  href="https://pomodoro-dominicgerman.vercel.app/"
-                  target="_blank"
-                >
-                  <button class="buttonLarge btnSmall">View project</button>
+                <a href="https://pomodoro.dominicgerman.com/" target="_blank">
+                  <button class="buttonLarge btnSmall">View site</button>
                 </a>
                 <a
                   href="https://github.com/dominicgerman/pomodoro"
+                  target="_blank"
+                >
+                  <button class="buttonLarge btnSmall">View source</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="projectItem">
+            <img
+              src="/nodejs-icon-logo-svgrepo-com.svg"
+              width="212"
+              height="211"
+              class=""
+            />
+            <div class="projectInfo contentContainer">
+              <h3>node_cleaner</h3>
+              <p>
+                A script that autmatically deletes node_modules folders from any
+                project repos on my machine that haven't been updated in over a
+                month.
+              </p>
+              <ul class="techItems small">
+                <li>Python</li>
+                <li>Shell</li>
+              </ul>
+              <div class="projectLinks">
+                <a
+                  href="https://github.com/dominicgerman/node_cleaner/blob/main/README.md"
+                  target="_blank"
+                >
+                  <button class="buttonLarge btnSmall">More info</button>
+                </a>
+                <a
+                  href="https://github.com/dominicgerman/node_cleaner"
                   target="_blank"
                 >
                   <button class="buttonLarge btnSmall">View source</button>
@@ -263,7 +361,7 @@
               </ul>
               <div class="projectLinks">
                 <a href="https://victoriagerman.com/" target="_blank">
-                  <button class="buttonLarge btnSmall">View project</button>
+                  <button class="buttonLarge btnSmall">View site</button>
                 </a>
                 <a
                   href="https://github.com/dominicgerman/victoria_portfolio"
