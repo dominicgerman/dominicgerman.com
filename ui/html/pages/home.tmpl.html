@@ -1,0 +1,26 @@
+{{define "title"}}Home{{end}} {{define "main"}} {{if .Posts}}
+<header class="stack">
+	<a href="/"><div class="header-image"></div></a>
+	<h1>Dominic German</h1>
+	<p>This is my blog.</p>
+	{{template "nav" .}}
+</header>
+<hr />
+<div class="stack">
+	{{range .Posts}}
+	<article>
+		<a href="/posts/{{.ID}}">
+			<h2>{{.Title}}</h2>
+		</a>
+		<section>
+			{{if .Tags}} {{range .Tags}}
+			<span><a href="/?tag={{.}}">#{{.}}</a></span>
+			{{end}} {{end}}
+		</section>
+		<p>{{.Description}}</p>
+	</article>
+	{{end}}
+</div>
+{{else}}
+<p>There's nothing to see here... yet!</p>
+{{end}} {{end}}

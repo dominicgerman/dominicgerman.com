@@ -1,0 +1,6 @@
+.env
+generate_hash.go
+
+# Ignore SQLite database files
+blog.db
+*.db
