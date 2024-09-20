@@ -10,9 +10,9 @@ import (
 	"time"
 
 	"github.com/alexedwards/scs/sqlite3store"
-	"github.com/alexedwards/scs/v2" // New import
+	"github.com/alexedwards/scs/v2"
 	"github.com/dominicgerman/dev-blog/internal/models"
-	"github.com/go-playground/form/v4" // New import
+	"github.com/go-playground/form/v4"
 
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -42,7 +42,6 @@ func main() {
 	}
 	defer db.Close()
 
-	// Initialize a new template cache...
 	templateCache, err := newTemplateCache()
 	if err != nil {
 		logger.Error(err.Error())

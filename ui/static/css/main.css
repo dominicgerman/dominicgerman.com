@@ -124,6 +124,10 @@ footer a {
 	text-decoration: underline;
 }
 
+h1 {
+	font-size: var(--s5);
+}
+
 input,
 textarea {
 	background-color: var(--color-secondary);
@@ -144,6 +148,29 @@ button {
 	margin-block: var(--s4);
 	border-radius: 9999px;
 	cursor: pointer;
+}
+
+pre {
+	background-color: var(--color-secondary);
+	padding: var(--s3);
+	border-radius: var(--s2);
+}
+
+pre code {
+	padding: 0;
+	border-radius: 0;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow: auto;
+	tab-size: 2;
+	font-size: 75%;
+}
+
+code {
+	background-color: var(--color-secondary);
+	padding: var(--s1);
+	font-size: 80%;
+	border-radius: var(--s2);
 }
 
 .stack {
@@ -169,7 +196,15 @@ button {
 }
 
 .content > * {
+	text-align: justify;
 	--space: var(--s3);
+	hyphens: auto; /* Automatically hyphenate long words */
+	word-break: break-word; /* Break long words if needed */
+	overflow-wrap: break-word; /* Break words to prevent overflow */
+}
+
+.content pre {
+	text-align: unset;
 }
 
 .content a {
@@ -180,7 +215,8 @@ button {
 	--space: var(--s5);
 }
 
-.content ul {
+.content ul,
+ol {
 	margin-inline-start: var(--s5);
 	margin-block-end: var(--s3);
 }
