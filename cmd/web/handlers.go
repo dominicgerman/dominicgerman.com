@@ -277,6 +277,12 @@ func (app *application) handlerUserLoginPost(w http.ResponseWriter, r *http.Requ
 
 	app.sessionManager.Put(r.Context(), "authenticatedUserID", id)
 
+	path := app.sessionManager.PopString(r.Context(), "redirectPathAfterLogin")
+	if path != "" {
+		http.Redirect(w, r, path, http.StatusSeeOther)
+		return
+	}
+
 	http.Redirect(w, r, "/post/create", http.StatusSeeOther)
 }
 
