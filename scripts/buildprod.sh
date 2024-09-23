@@ -1,3 +1,3 @@
 #!/bin/bash
 
-CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o web ./cmd/web/
+CGO_ENABLED=1 GOOS=linux GOARCH=arm64 go build -o /usr/local/bin/devblog ./cmd/web/
