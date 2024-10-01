@@ -46,3 +46,5 @@ Technologies Used
 - SQLite
 - HTML
 - CSS
+
+I also submitted this project as a solution to the [Personal Blog challenge](https://roadmap.sh/projects/personal-blog) on roadmap.sh.
