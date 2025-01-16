@@ -1,20 +1,25 @@
+{{define "title"}}Blog | {{end}}
 {{define "main"}}
 {{if .Posts}}
-<div class="stack">
-    {{range .Posts}}
-    <article>
-        <a href="/posts/{{.ID}}">
-            <h2>{{.Title}}</h2>
-        </a>
-        <section>
-            {{if .Tags}} {{range .Tags}}
-            <span><a href="/?tag={{.}}">#{{.}}</a></span>
-            {{end}} {{end}}
-        </section>
-        <p>{{.Description}}</p>
-    </article>
-    {{end}}
-</div>
+<section class="stack">
+    <h1>Posts</h1>
+    <div class="stack">
+        {{range .Posts}}
+        <article>
+            <a href="/posts/{{.ID}}">
+                <h2 class="sans bold">{{.Title}}</h2>
+            </a>
+            <section>
+                {{if .Tags}} {{range .Tags}}
+                <span><a href="/?tag={{.}}">#{{.}}</a></span>
+                {{end}} {{end}}
+            </section>
+            <p><span>Updated {{.Updated | humanDate}}</span></p>
+            <!-- <p>{{.Description}}</p> -->
+        </article>
+        {{end}}
+    </div>
+</section>
 {{else}}
 <p>There's nothing to see here... yet!</p>
 {{end}}

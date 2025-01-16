@@ -59,7 +59,7 @@ func (app *application) blog(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Use the new render helper.
-	app.render(w, r, http.StatusOK, "home.tmpl.html", data)
+	app.render(w, r, http.StatusOK, "blog.tmpl.html", data)
 }
 
 func (app *application) handlerPostView(w http.ResponseWriter, r *http.Request) {
