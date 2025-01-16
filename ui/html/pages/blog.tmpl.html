@@ -1,0 +1,21 @@
+{{define "main"}}
+{{if .Posts}}
+<div class="stack">
+    {{range .Posts}}
+    <article>
+        <a href="/posts/{{.ID}}">
+            <h2>{{.Title}}</h2>
+        </a>
+        <section>
+            {{if .Tags}} {{range .Tags}}
+            <span><a href="/?tag={{.}}">#{{.}}</a></span>
+            {{end}} {{end}}
+        </section>
+        <p>{{.Description}}</p>
+    </article>
+    {{end}}
+</div>
+{{else}}
+<p>There's nothing to see here... yet!</p>
+{{end}}
+{{end}}

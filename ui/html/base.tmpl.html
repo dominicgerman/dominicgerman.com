@@ -1,36 +1,30 @@
 {{define "base"}}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>{{template "title" .}} - DevBlog</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Link to the CSS stylesheet and favicon -->
-		<link rel="stylesheet" href="/static/css/main.css" />
-		<link
-			rel="shortcut icon"
-			href="/static/img/favicon.png"
-			type="image/x-icon"
-		/>
-		<script src="/static/js/main.js" type="text/javascript" defer></script>
-	</head>
-	<body class="center">
-		<main>
-			<!-- Display the flash message if one exists -->
-			{{with .Flash}}
-			<div class="flash">{{.}}</div>
-			{{end}} {{template "main" .}}
-		</main>
-		<footer>
-			Powered by <a href="https://golang.org/" target="_blank">Go</a> in
-			{{.CurrentYear}}
-		</footer>
-	</body>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{{template "title" .}}Dominic German</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://cdn.jsdelivr.net/npm/@jetbrains/fonts/css/jetbrains-mono.min.css" rel="stylesheet" />
+	<!-- Link to the CSS stylesheet and favicon -->
+	<link rel="stylesheet" href="/static/css/main.css" />
+	<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon" />
+	<script src="/static/js/main.js" type="text/javascript" defer></script>
+</head>
+
+<body class="center">
+	{{template "header" .}}
+	<main>
+		<!-- Display the flash message if one exists -->
+		{{with .Flash}}
+		<div class="flash">{{.}}</div>
+		{{end}} {{template "main" .}}
+	</main>
+	{{template "footer" .}}
+</body>
+
 </html>
 {{end}}
