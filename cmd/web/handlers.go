@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/dominicgerman/dev-blog/internal/models"
-	"github.com/dominicgerman/dev-blog/internal/validator"
+	"github.com/dominicgerman/dominicgerman.com/internal/models"
+	"github.com/dominicgerman/dominicgerman.com/internal/validator"
 	"github.com/yuin/goldmark"
 )
 

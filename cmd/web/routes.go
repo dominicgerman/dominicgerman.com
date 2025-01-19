@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/dominicgerman/dev-blog/ui"
+	"github.com/dominicgerman/dominicgerman.com/ui"
 
 	"github.com/justinas/alice"
 )

@@ -1,6 +1,6 @@
-module github.com/dominicgerman/dev-blog
+module github.com/dominicgerman/dominicgerman.com
 
-go 1.22.5
+go 1.23.4
 
 require (
 	github.com/alexedwards/scs/sqlite3store v0.0.0-20240316134038-7e11d57e8885
@@ -8,7 +8,7 @@ require (
 	github.com/go-playground/form/v4 v4.2.1
 	github.com/justinas/alice v1.2.0
 	github.com/justinas/nosurf v1.1.1
-	github.com/mattn/go-sqlite3 v1.14.23
-	github.com/yuin/goldmark v1.7.4
-	golang.org/x/crypto v0.27.0
+	github.com/mattn/go-sqlite3 v1.14.24
+	github.com/yuin/goldmark v1.7.8
+	golang.org/x/crypto v0.32.0
 )

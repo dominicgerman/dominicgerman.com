@@ -11,7 +11,7 @@ import (
 
 	"github.com/alexedwards/scs/sqlite3store"
 	"github.com/alexedwards/scs/v2"
-	"github.com/dominicgerman/dev-blog/internal/models"
+	"github.com/dominicgerman/dominicgerman.com/internal/models"
 	"github.com/go-playground/form/v4"
 
 	_ "github.com/mattn/go-sqlite3"

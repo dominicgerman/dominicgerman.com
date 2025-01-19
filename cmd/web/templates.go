@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/dominicgerman/dev-blog/internal/models"
-	"github.com/dominicgerman/dev-blog/ui"
+	"github.com/dominicgerman/dominicgerman.com/internal/models"
+	"github.com/dominicgerman/dominicgerman.com/ui"
 )
 
 type templateData struct {
