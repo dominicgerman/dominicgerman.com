@@ -307,6 +307,10 @@ ol {
 	color: var(--color-highlight);
 }
 
+.content img {
+	width: 100%;
+}
+
 .about p {
 	--space: var(--s5) !important;
 	font-family: var(--font-mono) !important;
