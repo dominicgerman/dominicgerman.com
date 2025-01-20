@@ -33,6 +33,11 @@ func (app *application) about(w http.ResponseWriter, r *http.Request) {
 	app.render(w, r, http.StatusOK, "about.tmpl.html", data)
 }
 
+func (app *application) projects(w http.ResponseWriter, r *http.Request) {
+	data := app.newTemplateData(r)
+	app.render(w, r, http.StatusOK, "projects.tmpl.html", data)
+}
+
 func (app *application) blog(w http.ResponseWriter, r *http.Request) {
 	posts, err := app.posts.Latest()
 	if err != nil {

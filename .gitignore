@@ -3,5 +3,4 @@ generate_hash.go
 web
 
 # Ignore SQLite database files
-blog.db
 *.db
