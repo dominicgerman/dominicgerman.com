@@ -1,50 +1,9 @@
-# Devblog
+# Portfolio/Blog
 
-Over the past year, I’ve been using Obsidian to organize random thoughts and rants. Since Obsidian works with simple Markdown files on my local machine, I decided to turn it into a [blog](https://blog.dominicgerman.com?tag=programming). I set up a VPS and used Deno to create a blog with minimal setup, deploying it from my Obsidian vault using a webhook. However, after encountering issues following a Deno update, I decided to rebuild the blog in Go, a language I enjoy using due to its templating capabilities and simplicity.
+A custom blog application written with Go, SQL, and CSS. It doubles as my portfolio and I self-host it on a Raspberry Pi in my basement. I use Caddy as a reverse proxy and Ansible to manage deployments. 
 
-## Project Structure
+## Background
+I’ve been using Obsidian to organize my notes. Since Obsidian just uses Markdown files on my local machine, I decided to start publishing some of my notes as a blog. I set up a VPS and used Deno to create a blog with minimal setup, deploying it from my Obsidian vault using a webhook. However, after encountering issues following a Deno update, I decided to rebuild the blog in Go. I absolutely love Go and now I try to write as much Go as I can. 
 
-The blog's structure is based on Go’s recommended project layout for building web servers:
-
-```go
-├── cmd
-│   └── web
-│       ├── handlers.go
-│       ├── helpers.go
-│       ├── main.go
-│       └── routes.go
-├── internal
-│   ├── models
-│   └── validator
-├── sql
-│   └── schema
-├── ui
-│   ├── html
-│   ├── static
-│   └── efs.go
-├── devblog.db
-├── go.mod
-└── go.sum
-```
-
-- cmd: Contains the web application logic. Future plans include adding a CLI tool here.
-- internal: Holds reusable logic, such as database interactions and form validation.
-- sql: Stores schema files.
-- ui: Contains HTML templates and static assets like CSS. The efs.go file embeds the UI into the compiled binary, making deployment simpler.
-- devblog.db: SQLite database file.
-- go.mod and go.sum: Manage dependencies and versioning.
-
-Key Components
-
-- main.go: Initializes the app, sets up logging, database connections, and sessions, and configures the HTTP server.
-- routes.go: Defines the URL routes and handles middleware for session management, authentication, and CSRF protection.
-- handlers.go: Manages page rendering, such as filtering posts by tag and rendering the homepage.
-
-Technologies Used
-
-- Go
-- SQLite
-- HTML
-- CSS
-
-I also submitted this project as a solution to the [Personal Blog challenge](https://roadmap.sh/projects/personal-blog) on roadmap.sh.
+## Usage
+Although possible, this app isn't really designed to be used by anyone but me. The UI would have to be completely re-written. But it does have forms for user authentication, creating posts, updating posts, and an endpoint for deleting posts. It has middleware for handling CSRF protection, session management and logging. If you're interested in the details, you can [read more here](https://dominicgerman.com/posts/4).
