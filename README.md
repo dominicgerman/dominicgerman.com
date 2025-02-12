@@ -1,6 +1,6 @@
 # Portfolio/Blog
 
-A custom blog application written with Go, SQL, and CSS. It doubles as my portfolio and I self-host it on a Raspberry Pi in my basement. I use Caddy as a reverse proxy and a bash script to manage deployments. 
+A custom blog application written with Go, SQL, and CSS. It doubles as my portfolio and I self-host it on a raspberry pi in my basement. I use Caddy as a reverse proxy and a bash script to manage deployments. 
 
 ## Background
 I’ve been using Obsidian to organize my notes. Since Obsidian just uses Markdown files on my local machine, I decided to start publishing some of my notes as a blog. I set up a VPS and used Deno to create a blog with minimal setup, deploying it from my Obsidian vault using a webhook. However, after encountering issues following a Deno update, I decided to rebuild the blog in Go. I absolutely love Go and now I try to write as much Go as I can. 
