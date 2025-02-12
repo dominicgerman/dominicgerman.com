@@ -14,6 +14,7 @@ type templateData struct {
 	CurrentYear     int
 	Post            models.Post
 	Posts           []models.Post
+	TagFilter       string
 	Form            any
 	Flash           string
 	IsAuthenticated bool

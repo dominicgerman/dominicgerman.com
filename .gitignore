@@ -1,6 +1,7 @@
 .env
 generate_hash.go
 web
+*.DS_Store
 
 # Ignore SQLite database files
 *.db

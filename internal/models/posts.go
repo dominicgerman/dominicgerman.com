@@ -132,7 +132,7 @@ func (m *PostModel) Get(id int) (Post, error) {
 // This will return the 10 most recently created posts.
 func (m *PostModel) Latest() ([]Post, error) {
 	stmt := `SELECT id, title, description, content, created, updated FROM posts 
-    ORDER BY id DESC LIMIT 10`
+    ORDER BY updated DESC LIMIT 10`
 
 	// Execute the SQL statement and get the result set.
 	rows, err := m.DB.Query(stmt)

@@ -113,11 +113,23 @@ main {
 	--space: var(--s5);
 }
 
-article span {
+article span,
+.tag span {
 	padding-inline-end: var(--s1);
 	color: var(--color-highlight);
 	font-size: 85%;
 	line-height: normal;
+}
+
+.tag-filter span {
+	font-weight: bold;
+	font-size: 115%;
+}
+
+.tag-filter a {
+	text-decoration: underline;
+	font-size: 85%;
+	margin-inline-start: 1rem;
 }
 
 article a {

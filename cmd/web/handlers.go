@@ -58,6 +58,7 @@ func (app *application) blog(w http.ResponseWriter, r *http.Request) {
 	}
 
 	data := app.newTemplateData(r)
+	data.TagFilter = tag
 	data.Posts = posts
 	if len(filteredPosts) > 0 {
 		data.Posts = filteredPosts
