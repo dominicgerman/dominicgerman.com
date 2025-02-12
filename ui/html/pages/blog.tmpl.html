@@ -17,7 +17,7 @@
             </a>
             <section>
                 {{if .Tags}} {{range .Tags}}
-                <span><a href="/?tag={{.}}">#{{.}}</a></span>
+                <span><a href="/blog?tag={{.}}">#{{.}}</a></span>
                 {{end}} {{end}}
             </section>
             <p><span>Updated {{.Updated | humanDate}}</span></p>
